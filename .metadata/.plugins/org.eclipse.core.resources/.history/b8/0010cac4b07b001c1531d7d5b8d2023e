@@ -1,0 +1,5 @@
+package com.cts.pensionerDetail.service;
+
+public class IPensionerDetailService {
+
+}

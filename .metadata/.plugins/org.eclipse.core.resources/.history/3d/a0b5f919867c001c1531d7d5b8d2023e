@@ -1,0 +1,17 @@
+package com.cts.process.pension.feignClient;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
+
+import com.cts.process.pension.exception.InvalidTokenException;
+import com.cts.process.pension.model.ProcessPensionInput;
+import com.cts.process.pension.model.ProcessPensionResponse;
+
+@FeignClient("PENSION-DISBURSEMENT-SERVICE")
+public interface PensionDisbursementClient {
+//	@PostMapping("/DisbursePension")
+//	public ProcessPensionResponse disbursePension(@RequestHeader(name = "Authorization", required = true) String requestTokenHeader,
+//			@RequestBody ProcessPensionInput processPensionInput) throws InvalidTokenException;
+}

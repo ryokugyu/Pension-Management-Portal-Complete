@@ -1,0 +1,5 @@
+package com.cts.process.pension.feignClient;
+
+public class PensionDisbursementClient {
+
+}

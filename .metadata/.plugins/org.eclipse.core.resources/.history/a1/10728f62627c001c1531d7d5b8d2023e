@@ -1,0 +1,65 @@
+package com.cts.process.pension.repository;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+import java.text.ParseException;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.cts.process.pension.model.PensionAmountDetail;
+import com.cts.process.pension.model.PensionerInput;
+import com.cts.process.pension.util.DateUtil;
+
+import lombok.extern.slf4j.Slf4j;
+
+
+@SpringBootTest
+@Slf4j
+class PensionDetailsRepositoryTests {
+
+	@Autowired
+	private PensionDetailsRepository pensionDetailsRepository;
+
+	@Autowired
+	private PensionerDetailsRepository pensionerDetailsRepository;
+
+	@Test
+	@DisplayName("Method to test the save() functionality")
+	void test_save() {
+		log.info("TEST EXECUTION START - test_save()");
+
+		PensionAmountDetail pensionAmountDetail = new PensionAmountDetail();
+		pensionAmountDetail.setAadhaarNumber("123456789012");
+		pensionAmountDetail.setBankServiceCharge(550.00);
+		pensionAmountDetail.setPensionAmount(31600.00);
+		pensionAmountDetail.setFinalAmount(31050.00);
+
+		PensionAmountDetail savedDetails = pensionDetailsRepository.save(pensionAmountDetail);
+		assertEquals(savedDetails.getAadhaarNumber(), pensionAmountDetail.getAadhaarNumber());
+		assertEquals(savedDetails.getBankServiceCharge(), pensionAmountDetail.getBankServiceCharge());
+		assertEquals(savedDetails.getPensionAmount(), pensionAmountDetail.getPensionAmount());
+		assertEquals(savedDetails.getFinalAmount(), pensionAmountDetail.getFinalAmount());
+
+		assertNotNull(savedDetails);
+		log.info("TEST EXECUTION END - test_save()");
+	}
+
+	@Test
+	@DisplayName("This method is responsible to test save() for pensioner details")
+	void testSaveForPensionerDetails() throws ParseException {
+		log.info("START - testSaveForPensionerDetails()");
+
+		PensionerInput pi = new PensionerInput("Shubham", DateUtil.parseDate("1999-02-02"), "BHPKN12931",
+				"211228329912", "Self");
+
+		PensionerInput savedDetails = pensionerDetailsRepository.save(pi);
+		assertEquals(savedDetails.getAadhaarNumber(), pi.getAadhaarNumber());
+		assertNotNull(savedDetails);
+		
+		log.info("END - testSaveForPensionerDetails()");
+	}
+}

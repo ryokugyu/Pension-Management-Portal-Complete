@@ -1,0 +1,18 @@
+package com.cts.pensionerDetail;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class PensionerDetailMicroserviceApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+	@Test
+	void testMainMethod() throws NumberFormatException, IOException, NotFoundException, ParseException {
+		PensionerDetailMicroserviceApplication.main(new String[] {});
+	}
+
+}

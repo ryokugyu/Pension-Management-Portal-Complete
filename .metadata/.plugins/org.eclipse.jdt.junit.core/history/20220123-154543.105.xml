@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Authorization-Microservice" project="Authorization-Microservice" tests="20" started="20" failures="1" errors="0" ignored="0">
+  <testsuite name="com.cts.auth.utils.JWTUtilTests" time="0.586" displayname="JWTUtilTests" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.utils.JWTUtilTests]">
+    <testcase name="test_fetchUsernameFromToken" classname="com.cts.auth.utils.JWTUtilTests" time="0.544" displayname="Method to test GetUsernameFromToken()" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.utils.JWTUtilTests]/[method:test_fetchUsernameFromToken()]"/>
+    <testcase name="jwtUtilNotNull" classname="com.cts.auth.utils.JWTUtilTests" time="0.005" displayname="jwtUtilNotNull()" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.utils.JWTUtilTests]/[method:jwtUtilNotNull()]"/>
+    <testcase name="test_tokenExpired_invalidTokenSignature" classname="com.cts.auth.utils.JWTUtilTests" time="0.006" displayname="Method to test whether token has invalid signature or not" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.utils.JWTUtilTests]/[method:test_tokenExpired_invalidTokenSignature()]"/>
+    <testcase name="test_tokenExpired_invalidFormatToken" classname="com.cts.auth.utils.JWTUtilTests" time="0.005" displayname="Method to test whether token is in Valid Format or not" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.utils.JWTUtilTests]/[method:test_tokenExpired_invalidFormatToken()]"/>
+    <testcase name="test_tokenExpired_expiredToken" classname="com.cts.auth.utils.JWTUtilTests" time="0.01" displayname="Method to test whether token is expired or not for expired Token" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.utils.JWTUtilTests]/[method:test_tokenExpired_expiredToken()]">
+      <failure>
+        <expected>true</expected>
+        <actual>false</actual>
+        org.opentest4j.AssertionFailedError: expected: &lt;true&gt; but was: &lt;false&gt;&#13;
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)&#13;
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:40)&#13;
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:35)&#13;
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:162)&#13;
+	at com.cts.auth.utils.JWTUtilTests.test_tokenExpired_expiredToken(JWTUtilTests.java:65)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:688)&#13;
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)&#13;
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)&#13;
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)&#13;
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)&#13;
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)&#13;
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)&#13;
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)&#13;
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)&#13;
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)&#13;
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)&#13;
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)&#13;
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)&#13;
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)&#13;
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:210)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:206)&#13;
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:131)&#13;
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:65)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)&#13;
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)&#13;
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)&#13;
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)&#13;
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)&#13;
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)&#13;
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)&#13;
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)&#13;
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)&#13;
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)&#13;
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)&#13;
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:84)&#13;
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:98)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)&#13;
+&#13;
+
+      </failure>
+    </testcase>
+    <testcase name="test_tokenExpired_validToken" classname="com.cts.auth.utils.JWTUtilTests" time="0.005" displayname="Method to test whether token is expired or not for valid token" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.utils.JWTUtilTests]/[method:test_tokenExpired_validToken()]"/>
+    <testcase name="test_tokenExpired_nullToken" classname="com.cts.auth.utils.JWTUtilTests" time="0.005" displayname="Method to test whether token is  Null or not" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.utils.JWTUtilTests]/[method:test_tokenExpired_nullToken()]"/>
+  </testsuite>
+  <testsuite name="com.cts.auth.service.UserServiceTests" time="0.037" displayname="UserServiceTests" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.service.UserServiceTests]">
+    <testcase name="testLoadUserByUsername_validUsername" classname="com.cts.auth.service.UserServiceTests" time="0.032" displayname="Method to test LoadUserByUsername() method when username is valid" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.service.UserServiceTests]/[method:testLoadUserByUsername_validUsername()]"/>
+    <testcase name="testLoadUserByUsername_invalidUsername" classname="com.cts.auth.service.UserServiceTests" time="0.005" displayname="Method to test LoadUserByUsername() method when username is valid" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.service.UserServiceTests]/[method:testLoadUserByUsername_invalidUsername()]"/>
+  </testsuite>
+  <testsuite name="com.cts.auth.AuthorizationMicroserviceApplicationTests" time="1.712" displayname="AuthorizationMicroserviceApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.AuthorizationMicroserviceApplicationTests]">
+    <testcase name="contextLoads" classname="com.cts.auth.AuthorizationMicroserviceApplicationTests" time="1.712" displayname="contextLoads()" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.AuthorizationMicroserviceApplicationTests]/[method:contextLoads()]"/>
+  </testsuite>
+  <testsuite name="com.cts.auth.controller.AuthorizationControllerTests" time="0.216" displayname="AuthorizationControllerTests" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.controller.AuthorizationControllerTests]">
+    <testcase name="testAuthorizeTheRequest_validToken" classname="com.cts.auth.controller.AuthorizationControllerTests" time="0.065" displayname="Method to validate authorizeTheRequest() method with valid token" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.controller.AuthorizationControllerTests]/[method:testAuthorizeTheRequest_validToken()]"/>
+    <testcase name="authenticateTheRequest_validCredentials" classname="com.cts.auth.controller.AuthorizationControllerTests" time="0.059" displayname="Method to validate authenticateTheRequest() method with valid credentials" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.controller.AuthorizationControllerTests]/[method:authenticateTheRequest_validCredentials()]"/>
+    <testcase name="testAuthorizeTheRequest_invalidRole" classname="com.cts.auth.controller.AuthorizationControllerTests" time="0.008" displayname="Method to validate authorizeTheRequest() method with invalid role" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.controller.AuthorizationControllerTests]/[method:testAuthorizeTheRequest_invalidRole()]"/>
+    <testcase name="authenticateTheRequest_invalidCredentials" classname="com.cts.auth.controller.AuthorizationControllerTests" time="0.04" displayname="Method to validate authenticateTheRequest() method with invalid account credentials" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.controller.AuthorizationControllerTests]/[method:authenticateTheRequest_invalidCredentials()]"/>
+    <testcase name="authenticateTheRequest_LockedCredentials" classname="com.cts.auth.controller.AuthorizationControllerTests" time="0.012" displayname="Method to validate authenticateTheRequest() method with locked account credentials" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.controller.AuthorizationControllerTests]/[method:authenticateTheRequest_LockedCredentials()]"/>
+    <testcase name="authenticateTheRequest_DisabledAccountCredentials" classname="com.cts.auth.controller.AuthorizationControllerTests" time="0.007" displayname="Method to validate authenticateTheRequest() method with disabled account credentials" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.controller.AuthorizationControllerTests]/[method:authenticateTheRequest_DisabledAccountCredentials()]"/>
+    <testcase name="testAuthorizeTheRequest_invalidToken" classname="com.cts.auth.controller.AuthorizationControllerTests" time="0.007" displayname="Method to validate authorizeTheRequest() method with invalid/expired token" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.controller.AuthorizationControllerTests]/[method:testAuthorizeTheRequest_invalidToken()]"/>
+    <testcase name="testHealthCheck" classname="com.cts.auth.controller.AuthorizationControllerTests" time="0.005" displayname="Method to validate controller health" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.controller.AuthorizationControllerTests]/[method:testHealthCheck()]"/>
+  </testsuite>
+  <testsuite name="com.cts.auth.repository.UserRepositoryTests" time="0.061" displayname="UserRepositoryTests" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.repository.UserRepositoryTests]">
+    <testcase name="validate_notExistingUser" classname="com.cts.auth.repository.UserRepositoryTests" time="0.045" displayname="Method to test findById() method when user not present in database" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.repository.UserRepositoryTests]/[method:validate_notExistingUser()]"/>
+    <testcase name="validate_existingUser" classname="com.cts.auth.repository.UserRepositoryTests" time="0.015" displayname="Method to test findById() method when user present in database" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.repository.UserRepositoryTests]/[method:validate_existingUser()]"/>
+  </testsuite>
+</testrun>

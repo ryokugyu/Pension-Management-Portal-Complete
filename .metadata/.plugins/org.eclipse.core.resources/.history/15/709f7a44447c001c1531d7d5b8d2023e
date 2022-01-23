@@ -1,0 +1,78 @@
+package com.cts.pensionerDetail.service;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
+import java.io.IOException;
+import java.text.ParseException;
+
+import org.junit.jupiter.api.DisplayName;
+//import org.junit.Rule;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.cts.pensionerDetail.exception.NotFoundException;
+import com.cts.pensionerDetail.model.BankDetails;
+import com.cts.pensionerDetail.model.PensionerDetails;
+import com.cts.pensionerDetail.util.DateUtil;
+
+/**
+ * @author SREEKANTH GANTELA
+ * 
+ *         This is the service test class
+ * 
+ *         Test cases for the Pension Detail Service
+ *
+ */
+@SpringBootTest
+class PensionDetailServiceTest {
+
+	@Autowired
+	PensionerDetailService pensionerDetailService;
+
+	/**
+	 * Test the Pensioner Detail service is null or not
+	 */
+
+	@Test
+	void testNotNullPensionDetailServiceObject() {
+		assertNotNull(pensionerDetailService);
+	}
+
+	/**
+	 * Test Case for the Correct Details Returned From Service With Correct
+	 * AadharNumber
+	 */
+
+	@Test
+	@DisplayName(value = "Method to test whether Aadhaar Card Number present or not in CSV")
+	void testCorrectDetailsReturnedFromServiceWithCorrectAadharNumber()
+			throws IOException, NotFoundException, NumberFormatException, ParseException, NullPointerException {
+		final String aadhaarNumber = "982521289534";
+
+		PensionerDetails pensionerDetail = new PensionerDetails("982521289534", DateUtil.parseDate("11-02-2009"),
+				"XZWE3HWLXR", 32940, 6252, "self", new BankDetails("Goldward Financial Group", 88980359, "public"));
+		assertEquals(pensionerDetailService.getPensionerDetailByAadhaarNumber(aadhaarNumber).getPan(), pensionerDetail.getPan());
+		assertEquals(pensionerDetailService.getPensionerDetailByAadhaarNumber(aadhaarNumber).getBank().getAccountNumber(),
+				pensionerDetail.getBank().getAccountNumber());
+	}
+
+	/**
+	 * Test Case for the incorrect details returned From Service With Invalid
+	 * Aadhaar Number
+	 */
+
+	@Test
+	@DisplayName(value = "Method to test whether Aadhaar Card Number present or not in CSV")
+	void testForIncorrectAadharNumber() {
+		final String aadhaarNumber = "12345678";
+
+		NotFoundException exception = assertThrows(NotFoundException.class,
+				() -> pensionerDetailService.getPensionerDetailByAadhaarNumber(aadhaarNumber));
+		assertEquals(exception.getMessage(), "AADHAAR_NUMBER_NOT_FOUND");
+		assertNotNull(exception);
+	}
+}

@@ -1,0 +1,19 @@
+package com.cts.process.pension.exception;
+
+class InvalidTokenException extends RuntimeException {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5745589820125781927L;
+
+	/**
+	 * 
+	 *
+	 */
+
+	public InvalidTokenException(String message) {
+		super(message);
+	}
+
+}

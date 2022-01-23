@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="UserServiceTests" project="Authorization-Microservice" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.cts.auth.service.UserServiceTests" time="0.054" displayname="UserServiceTests" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.service.UserServiceTests]">
+    <testcase name="testLoadUserByUsername_validUsername" classname="com.cts.auth.service.UserServiceTests" time="0.038" displayname="Method to test LoadUserByUsername() method when username is valid" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.service.UserServiceTests]/[method:testLoadUserByUsername_validUsername()]"/>
+    <testcase name="testLoadUserByUsername_invalidUsername" classname="com.cts.auth.service.UserServiceTests" time="0.014" displayname="Method to test LoadUserByUsername() method when username is valid" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.service.UserServiceTests]/[method:testLoadUserByUsername_invalidUsername()]"/>
+  </testsuite>
+</testrun>

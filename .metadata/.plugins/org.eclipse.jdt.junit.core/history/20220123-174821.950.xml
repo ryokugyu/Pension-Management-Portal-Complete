@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="PensionerDetail-Microservice" project="PensionerDetail-Microservice" tests="6" started="6" failures="0" errors="1" ignored="0">
+  <testsuite name="com.cts.pensionerDetail.controller.PensionDetailsControllerTest" time="0.199" displayname="PensionDetailsControllerTest" uniqueid="[engine:junit-jupiter]/[class:com.cts.pensionerDetail.controller.PensionDetailsControllerTest]">
+    <testcase name="test_fetchPensionerDetails_aadhaarCardNotPresent" classname="com.cts.pensionerDetail.controller.PensionDetailsControllerTest" time="0.176" displayname="Method to test whether Aadhaar Card Number present or not in CSV" uniqueid="[engine:junit-jupiter]/[class:com.cts.pensionerDetail.controller.PensionDetailsControllerTest]/[method:test_fetchPensionerDetails_aadhaarCardNotPresent()]"/>
+    <testcase name="test_fetchPensionerDetails_aadhaarCardPresent" classname="com.cts.pensionerDetail.controller.PensionDetailsControllerTest" time="0.021" displayname="Method to test whether Aadhaar Card Number present or not in CSV" uniqueid="[engine:junit-jupiter]/[class:com.cts.pensionerDetail.controller.PensionDetailsControllerTest]/[method:test_fetchPensionerDetails_aadhaarCardPresent()]"/>
+  </testsuite>
+  <testsuite name="com.cts.pensionerDetail.PensionerDetailMicroserviceApplicationTests" time="4.284" displayname="PensionerDetailMicroserviceApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.cts.pensionerDetail.PensionerDetailMicroserviceApplicationTests]">
+    <testcase name="contextLoads" classname="com.cts.pensionerDetail.PensionerDetailMicroserviceApplicationTests" time="4.284" displayname="contextLoads()" uniqueid="[engine:junit-jupiter]/[class:com.cts.pensionerDetail.PensionerDetailMicroserviceApplicationTests]/[method:contextLoads()]">
+      <error>org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8083 is already in use&#13;
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181)&#13;
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)&#13;
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)&#13;
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)&#13;
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)&#13;
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)&#13;
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)&#13;
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)&#13;
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)&#13;
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:771)&#13;
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:763)&#13;
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:438)&#13;
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339)&#13;
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329)&#13;
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1318)&#13;
+	at com.cts.pensionerDetail.PensionerDetailMicroserviceApplication.main(PensionerDetailMicroserviceApplication.java:15)&#13;
+	at com.cts.pensionerDetail.PensionerDetailMicroserviceApplicationTests.contextLoads(PensionerDetailMicroserviceApplicationTests.java:11)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:688)&#13;
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)&#13;
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)&#13;
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)&#13;
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)&#13;
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)&#13;
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)&#13;
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)&#13;
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)&#13;
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)&#13;
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)&#13;
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)&#13;
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)&#13;
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)&#13;
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:210)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:206)&#13;
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:131)&#13;
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:65)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)&#13;
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)&#13;
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)&#13;
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)&#13;
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)&#13;
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)&#13;
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)&#13;
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)&#13;
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)&#13;
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)&#13;
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)&#13;
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:84)&#13;
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:98)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)&#13;
+Caused by: org.springframework.boot.web.server.PortInUseException: Port 8083 is already in use&#13;
+	at org.springframework.boot.web.server.PortInUseException.lambda$throwIfPortBindingException$0(PortInUseException.java:70)&#13;
+	at org.springframework.boot.web.server.PortInUseException.lambda$ifPortBindingException$1(PortInUseException.java:85)&#13;
+	at org.springframework.boot.web.server.PortInUseException.ifCausedBy(PortInUseException.java:103)&#13;
+	at org.springframework.boot.web.server.PortInUseException.ifPortBindingException(PortInUseException.java:82)&#13;
+	at org.springframework.boot.web.server.PortInUseException.throwIfPortBindingException(PortInUseException.java:69)&#13;
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:228)&#13;
+	at org.springframework.boot.web.servlet.context.WebServerStartStopLifecycle.start(WebServerStartStopLifecycle.java:43)&#13;
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)&#13;
+	... 83 more&#13;
+Caused by: java.lang.IllegalArgumentException: standardService.connector.startFailed&#13;
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:243)&#13;
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:282)&#13;
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:213)&#13;
+	... 85 more&#13;
+Caused by: org.apache.catalina.LifecycleException: Protocol handler start failed&#13;
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1075)&#13;
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)&#13;
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:239)&#13;
+	... 87 more&#13;
+Caused by: java.net.BindException: Address already in use: bind&#13;
+	at java.base/sun.nio.ch.Net.bind0(Native Method)&#13;
+	at java.base/sun.nio.ch.Net.bind(Net.java:555)&#13;
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:337)&#13;
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294)&#13;
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:272)&#13;
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:227)&#13;
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1208)&#13;
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1294)&#13;
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:614)&#13;
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1072)&#13;
+	... 89 more&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="com.cts.pensionerDetail.service.PensionDetailServiceTest" time="0.027" displayname="PensionDetailServiceTest" uniqueid="[engine:junit-jupiter]/[class:com.cts.pensionerDetail.service.PensionDetailServiceTest]">
+    <testcase name="test_validateCorrectAadhaarCardDetails" classname="com.cts.pensionerDetail.service.PensionDetailServiceTest" time="0.008" displayname="Method to test whether details provided by valid aadhaar card number is correct or not" uniqueid="[engine:junit-jupiter]/[class:com.cts.pensionerDetail.service.PensionDetailServiceTest]/[method:test_validateCorrectAadhaarCardDetails()]"/>
+    <testcase name="test_PensionDetailServiceObject" classname="com.cts.pensionerDetail.service.PensionDetailServiceTest" time="0.012" displayname="Method to test Pensioner Detail Service Object is null or not" uniqueid="[engine:junit-jupiter]/[class:com.cts.pensionerDetail.service.PensionDetailServiceTest]/[method:test_PensionDetailServiceObject()]"/>
+    <testcase name="test_validateInCorrectAadhaarCardDetails" classname="com.cts.pensionerDetail.service.PensionDetailServiceTest" time="0.005" displayname="Method to test whether details provided by invalid aadhaar card number or not" uniqueid="[engine:junit-jupiter]/[class:com.cts.pensionerDetail.service.PensionDetailServiceTest]/[method:test_validateInCorrectAadhaarCardDetails()]"/>
+  </testsuite>
+</testrun>

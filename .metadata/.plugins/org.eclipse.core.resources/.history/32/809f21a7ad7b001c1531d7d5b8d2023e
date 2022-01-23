@@ -1,0 +1,5 @@
+package com.cts.auth.service;
+
+public class UserServiceTests {
+
+}

@@ -1,0 +1,1 @@
+insert into access_details values ('admin', '$2a$12$t.1BTGVYIkKe8S5H6BC9N.sAmNp0DytK03BqEnZc63fObgeGqvQh.')

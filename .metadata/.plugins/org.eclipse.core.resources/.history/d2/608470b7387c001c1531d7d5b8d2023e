@@ -1,0 +1,13 @@
+application: ''
+client: ''
+defaultZone: 'http://localhost:8761/eureka/ '
+errorMessage: Aadhaar Number Not Found
+eureka: ''
+fetch-registry: true
+jwt: ''
+name: PENSIONER-DETAIL-SERVICE
+port: 8083
+register-with-eureka: true
+server: ''
+service-url: ''
+spring: ''

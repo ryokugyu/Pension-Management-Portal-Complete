@@ -1,0 +1,59 @@
+package com.cts.auth.util;
+
+import java.util.Base64;
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+import com.cts.auth.exception.InvalidTokenException;
+
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.ExpiredJwtException;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.MalformedJwtException;
+import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.SignatureException;
+
+@Component
+public class JWTUtil {
+
+	@Value("${app.secretKey}")
+	private String secretKey;
+
+	@Value("${app.jwtValidityMinutes}")
+	private long jwtValidityMinutes;
+
+	public String generateToken(String subject) {
+		return Jwts.builder().setIssuedAt(new Date(System.currentTimeMillis())).setSubject(subject)
+				.setExpiration(new Date(System.currentTimeMillis() + TimeUnit.MINUTES.toMillis(jwtValidityMinutes)))
+				.signWith(SignatureAlgorithm.HS256, Base64.getEncoder().encode(secretKey.getBytes())).compact();
+	}
+
+	public String getUsernameFromToken(String token) {
+		return getClaims(token).getSubject();
+	}
+
+private Claims getClaims(String token) {
+		return Jwts.parser().setSigningKey(Base64.getEncoder().encode(secretKey.getBytes())).parseClaimsJws(token)
+				.getBody();
+	}
+
+	
+	public boolean isTokenExpiredOrInvalidFormat(String token) throws InvalidTokenException {
+		try {
+			getClaims(token);
+		} catch (ExpiredJwtException e) {
+			throw new InvalidTokenException("TOKEN EXPIRED");
+		} catch (MalformedJwtException e) {
+			throw new InvalidTokenException("INVALID TOKEN FORMAT");
+		} catch (IllegalArgumentException e) {
+			throw new InvalidTokenException("NULL/EMPTY TOKEN");
+		} catch (SignatureException e) {
+			throw new InvalidTokenException("INVALID TOKEN SIGNATURE");
+		}
+		return false;
+	}
+
+}

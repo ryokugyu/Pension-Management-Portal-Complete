@@ -1,0 +1,18 @@
+package com.cts.pensionerDetail;
+
+import java.io.IOException;
+import java.text.ParseException;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.cts.pensionerDetail.exception.NotFoundException;
+
+@SpringBootTest
+class PensionerDetailMicroserviceApplicationTests {
+
+	@Test
+	void contextLoads() {
+		PensionerDetailMicroserviceApplication.main(new String[] {});
+	}
+}

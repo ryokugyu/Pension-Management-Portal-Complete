@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="JWTUtilTests" project="Authorization-Microservice" tests="7" started="7" failures="0" errors="0" ignored="0">
+  <testsuite name="com.cts.auth.utils.JWTUtilTests" time="0.559" displayname="JWTUtilTests" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.utils.JWTUtilTests]">
+    <testcase name="test_fetchUsernameFromToken" classname="com.cts.auth.utils.JWTUtilTests" time="0.523" displayname="Method to test GetUsernameFromToken()" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.utils.JWTUtilTests]/[method:test_fetchUsernameFromToken()]"/>
+    <testcase name="jwtUtilNotNull" classname="com.cts.auth.utils.JWTUtilTests" time="0.003" displayname="jwtUtilNotNull()" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.utils.JWTUtilTests]/[method:jwtUtilNotNull()]"/>
+    <testcase name="test_tokenExpired_invalidTokenSignature" classname="com.cts.auth.utils.JWTUtilTests" time="0.008" displayname="Method to test whether token has invalid signature or not" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.utils.JWTUtilTests]/[method:test_tokenExpired_invalidTokenSignature()]"/>
+    <testcase name="test_tokenExpired_invalidFormatToken" classname="com.cts.auth.utils.JWTUtilTests" time="0.006" displayname="Method to test whether token is in Valid Format or not" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.utils.JWTUtilTests]/[method:test_tokenExpired_invalidFormatToken()]"/>
+    <testcase name="test_tokenExpired_expiredToken" classname="com.cts.auth.utils.JWTUtilTests" time="0.005" displayname="Method to test whether token is expired or not for expired Token" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.utils.JWTUtilTests]/[method:test_tokenExpired_expiredToken()]"/>
+    <testcase name="test_tokenExpired_validToken" classname="com.cts.auth.utils.JWTUtilTests" time="0.005" displayname="Method to test whether token is expired or not for valid token" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.utils.JWTUtilTests]/[method:test_tokenExpired_validToken()]"/>
+    <testcase name="test_tokenExpired_nullToken" classname="com.cts.auth.utils.JWTUtilTests" time="0.004" displayname="Method to test whether token is  Null or not" uniqueid="[engine:junit-jupiter]/[class:com.cts.auth.utils.JWTUtilTests]/[method:test_tokenExpired_nullToken()]"/>
+  </testsuite>
+</testrun>

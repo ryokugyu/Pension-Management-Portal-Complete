@@ -1,0 +1,5 @@
+package com.cts.process.pension.exception;
+
+public class ErrorResponse {
+
+}

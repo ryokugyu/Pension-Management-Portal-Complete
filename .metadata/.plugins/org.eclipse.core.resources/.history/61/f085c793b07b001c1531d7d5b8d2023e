@@ -1,0 +1,5 @@
+package com.cts.pensionerDetail.model;
+
+public class BankDetails {
+
+}
